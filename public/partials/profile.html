@@ -1,0 +1,17 @@
+<div class="col-md-4">
+    <form id="profile" action="/user/profile/edit" method="post" enctype="multipart/form-data">
+        <label>Login</label>
+        <input type="text" name="email" value="{{user.local.email}}" />
+        <label>New Password</label>
+        <input type="password" name="password_new" />
+        <label>Repeat Password</label>
+        <input type="password" name="password_new_repeat" />
+        <br />
+        <input type="file" name="photo" />
+        <br />
+        <input type="submit" value="Save" />
+    </form>
+</div>
+<div class="col-md-8 profile-image-column">
+    <img id="profile-img" ng-src="{{data.user_images_path}}/{{user.photo}}" class="img-thumbnail" />
+</div>

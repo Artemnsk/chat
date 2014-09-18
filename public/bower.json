@@ -1,0 +1,22 @@
+{
+  "name": "chat",
+  "version": "1.0",
+  "homepage": "https://github.com/Artemnsk/chat",
+  "authors": [
+    "artemnsk <shelkov1991@gmail.com>"
+  ],
+  "description": "Chat project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.x",
+    "angularjs": "~1.2.23",
+    "jquery": "~2.1.1"
+  }
+}

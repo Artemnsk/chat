@@ -1,0 +1,13 @@
+ul.nav.nav-tabs(role="tablist")
+    if user
+        li
+            a(href="#/user/profile") Profile
+        li
+            a(href="#/user/chat") Chat
+        li
+            a(href="/user/logout") Logout
+    else
+        li
+            a(href="#/user/login") Login
+        li
+            a(href="#/user/signup") Signup

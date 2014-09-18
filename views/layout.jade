@@ -1,7 +1,32 @@
-doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+doctype html5
+html(ng-app="app")
+    head
+        link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap-theme.css')
+        script(src='/jquery/dist/jquery.min.js')
+        script(src='/bootstrap/dist/js/bootstrap.js')
+
+        script(src='/angularjs/angular.js')
+        script(src='/angular-route/angular-route.js')
+        script(src='/angular-resource/angular-resource.js')
+
+        script(src="/socket.io-client/socket.io.js")
+        script(src="/javascripts/fileupload/fileupload.js")
+
+        script(src='/javascripts/jquery/menu.js')
+
+        if user
+            script(src='/javascripts/app.js')
+            script(src='/javascripts/controllers.js')
+            script(src='/javascripts/user.js')
+        else
+            script(src='/javascripts/app-anonymous.js')
+            script(src='/javascripts/controllers-anonymous.js')
+
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        block includes
+    body
+        include includes/menu
+        span(ng-controller="RootCtrl")
+            block content

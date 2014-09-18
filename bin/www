@@ -7,3 +7,24 @@ app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 });
+
+var io = require('../routes/chat/socket_routes')(server);
+
+/*
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1/chat');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
+    // yay!
+    console.log("asdasdasd");
+});
+
+var kittySchema = mongoose.Schema({
+    name: String
+})
+var Kitten = mongoose.model('Kitten', kittySchema);
+var fluffy = new Kitten({ name: 'fluffy' });
+fluffy.save(function (err, fluffy) {
+    if (err) return console.error(err);
+});*/

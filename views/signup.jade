@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1.
+        Signup page.
+    #error=error
+    form#signup(action = "/user/signup", method = "post")
+        label.
+            Login
+        input(type = "text", name = "email")
+        label.
+            Password
+        input(type = "password", name = "password")
+        input(type = "submit", value = "Signup")

@@ -1,0 +1,23 @@
+extends layout
+
+block includes
+    script(src='/angularjs/angular.js')
+    script(src='/angular-route/angular-route.js')
+    script(src='/javascripts/app.js')
+    script(src='/javascripts/controllers.js')
+
+block content
+  h1.
+      Chat
+  #chat-wrapper(ng-controller="chatCtrl")
+      #chat
+          h2 My test chats {{text}}
+      form#chat-msg(action='')
+        input#m(type='text', name='message')
+        button(value="Send").
+          Send
+      form(action='/upload/image', method='post', enctype="multipart/form-data")
+          input#m(type='file', name='image')
+          button(value="Send").
+              Send file
+  script(src="/socket.io-client/socket.io.js")

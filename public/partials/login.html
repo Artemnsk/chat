@@ -1,0 +1,10 @@
+<span ng-controller="RootCtrl">
+    <form with-progress-bar progress="progress" id="login" action="/user/login" method="post">
+        <input placeholder="Email" type="text" name="email" class="form-control" />
+        <input placeholder="Password" type="password" name="password" class="form-control" />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+            Login
+        </button>
+        {{progress}}
+    </form>
+</span>
